@@ -17,6 +17,25 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+  let index = 0;
+  let result = "";
+  while (index < n) {
+    const poundlength = index + 1;
+    let poundindex = 0;
+    let spaceindex = 0;
+    while (poundindex < poundlength) {
+      result += "#";
+      poundindex++;
+    }
+    while (spaceindex < n - poundlength) {
+      result += " ";
+      spaceindex++;
+    }
+    console.log(result);
+    result = "";
+    index++;
+  }
+}
 
 module.exports = steps;
