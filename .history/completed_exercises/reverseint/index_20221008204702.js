@@ -38,6 +38,7 @@ function revIntegerMine(aInt) {
   if (isNaN(aInt)) {
     throw new Error("not a number");
   }
+  let n = 0
   let reversed = 0;
   while ((aInt % 10) !== 0) {
     reversed = (reversed * 10) + (aInt % 10);
