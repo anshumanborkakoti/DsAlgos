@@ -126,9 +126,9 @@ function radixSort(arr) {
   if (arr.length === 0) {
     return [];
   }
-  let sortedArray = [...arr];
+  let result = [...arr];
   let largestDigits = 0;
-  for (let num of sortedArray) {
+  for (let num of result) {
     const digitCount = getDigitCount(num);
     if (digitCount > largestDigits) {
       largestDigits = digitCount;
@@ -136,13 +136,13 @@ function radixSort(arr) {
   }
   for (let i = 0; i < largestDigits; i++) {
     const radixArray = new Array([], [], [], [], [], [], [], [], [], []);
-    for (let num of sortedArray) {
+    for (let num of result) {
       const lastDigit = getLastDigit(num, i);
       radixArray[lastDigit].push(num);
     }
-    sortedArray = [].concat(...radixArray);
+    result = [].concat(...radixArray);
   }
-  return sortedArray;
+  return result;
 
 }
 
