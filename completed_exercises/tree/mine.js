@@ -74,7 +74,6 @@ class BinarySearchTree {
             if (node.right) {
                 traverse(node.right);
             }
-            return;
         }
         traverse(this.root);
         values.forEach(value => console.log(value))
@@ -90,7 +89,6 @@ class BinarySearchTree {
                 traverse(node.right);
             }
             values.push(node.val);
-            return;
         }
         traverse(this.root);
         values.forEach(value => console.log(value))

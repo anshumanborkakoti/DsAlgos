@@ -204,7 +204,7 @@ function quickSort(arr, startIndex = 0, endIndex = arr.length - 1) {
   if (!Array.isArray(arr) || arr.some(element => isNaN(element))) {
     throw new Error("error!");
   }
-  if (arr.length == 0) {
+  if (arr.length === 0) {
     return [];
   }
   if (startIndex >= endIndex) {
